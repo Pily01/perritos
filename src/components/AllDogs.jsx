@@ -7,14 +7,15 @@ import axios from "axios"
 class AllDogs extends Component {
   constructor(){
     super()
-    this.state = {dogs: []}
+    this.state = {dogs: [], dogsStatic: []}
   }
 
   getAllDogs = () =>{
     axios.get(`https://dry-ocean-98079.herokuapp.com/dogs/dogs`, {withCredentials:true})
     .then(responseFromApi => {
       this.setState({
-        dogs: responseFromApi.data
+        dogs: responseFromApi.data,
+        dogsStatic: responseFromApi.data
       })
     })
   }
@@ -30,10 +31,10 @@ class AllDogs extends Component {
   }
 
   searchDog = (e) => {
-    const {dogs} = this.state
+    const {dogsStatic} = this.state
     const input = e.target.value;
     const regEx = RegExp(input, "i")
-    const filtered = dogs.filter(dog => regEx.test(dog.breed))
+    const filtered = dogsStatic.filter(dog => regEx.test(dog.breed))
     this.setState({dogs: filtered})
   }
 
