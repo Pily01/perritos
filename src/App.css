@@ -7,6 +7,48 @@
   height: 40vmin;
 }
 
+.dog-box-group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
+.form-control{
+  width: 200px;
+  margin-right: 20px;
+  border-color: forestgreen !important;
+}
+
+.info-container{
+  width: 400px;
+  height: 100px;
+  border: 2px solid green;
+  margin: 10px;
+  border-radius: 30px;
+}
+
+.btn{
+  margin: 7px;
+  color: white;
+  background-color: green;
+}
+
+.title{
+  color: forestgreen;
+  font-size: 5em;
+  margin: 20px;
+}
+
+.dog-box{
+  width: 330px;
+  height: 500px;
+  border: 2px solid green;
+  margin: 10px;
+  border-radius: 30px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
